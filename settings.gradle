@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "DevApps2020.1-HelloWorld"
