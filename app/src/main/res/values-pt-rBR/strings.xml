@@ -2,4 +2,7 @@
 <resources>
 	<string name="app_label">Meu label</string>
 	<string name="main_activity_hello_world">Olá Mundo</string>
+	<string name="main_activity_buttom_sum">Somar</string>
+	<string name="main_activity_text_first_value">Primeiro valor</string>
+	<string name="main_activity_text_second_value">Segundo valor</string>
 </resources>
