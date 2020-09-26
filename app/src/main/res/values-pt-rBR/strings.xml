@@ -3,5 +3,7 @@
 	<string name="app_label">Meu label</string>
 	<string name="main_activity_hello_world">Olá Mundo</string>
 	<string name="button">Clique Aqui</string>
+	<string name="button_findviewbyid">FindViewById</string>
+	<string name="button_onclick">On Click</string>
 	<string name="headline">Olá Mundo</string>
 </resources>
