@@ -2,4 +2,6 @@
 <resources>
 	<string name="app_label">Mio label</string>
 	<string name="main_activity_hello_world">Hola Mundo</string>
+	<string name="button">Click Here</string>
+	<string name="headline">Hola Mundo</string>
 </resources>
