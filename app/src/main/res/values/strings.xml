@@ -6,4 +6,7 @@
 	<string name="button_findviewbyid">FindViewById</string>
 	<string name="button_onclick">On Click</string>
 	<string name="headline">Hello Word!</string>
+	<string name="botao1" translatable="false">START</string>
+	<string name="botao2" translatable="false">MIDDLE</string>
+	<string name="botao3" translatable="false">END</string>
 </resources>

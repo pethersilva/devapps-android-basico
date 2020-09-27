@@ -1,93 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-
-	<androidx.constraintlayout.widget.ConstraintLayout
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<!-- Linha 1-->
+	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		tools:context=".MainActivity">
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/startGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.1"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/topGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.1"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/bottomGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.9"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/endGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.9"/>
-
+		android:layout_height="wrap_content">
 		<Button
-			android:id="@+id/button"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="16dp"
-			android:text="@string/button"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
-			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
-
-		<TextView
-			android:id="@+id/textView"
+			android:text="@string/botao1"/>
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/botao2"/>
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/botao3"/>
+	</LinearLayout>
+	<!-- Linha 2-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<Button
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="16dp"
-			android:layout_marginTop="12dp"
-			android:hint="@string/headline"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintEnd_toStartOf="@id/endGuideline"
-			app:layout_constraintHorizontal_bias="0.0"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
-			app:layout_constraintTop_toBottomOf="@+id/buttonOnClick" />
-
-		<ImageButton
-			android:id="@+id/imageButton"
+			android:text="@string/botao1"
+			android:layout_weight="1"/>
+		<Button
 			android:layout_width="0dp"
-			android:layout_height="471dp"
-			android:layout_marginTop="16dp"
-			android:src="@drawable/skywallpaper"
-			app:layout_constraintEnd_toStartOf="@+id/endGuideline"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
-			app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-		<Button
-			android:id="@+id/buttonFindViewById"
-			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="@string/button_findviewbyid"
-			app:layout_constraintEnd_toStartOf="@+id/endGuideline"
-			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
-
+			android:text="@string/botao2"
+			android:layout_weight="1"/>
 		<Button
-			android:id="@+id/buttonOnClick"
-			android:layout_width="wrap_content"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="16dp"
-			android:onClick="handleOnClickEvent"
-			android:text="@string/button_onclick"
-			app:layout_constraintBottom_toTopOf="@id/textView"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
-			app:layout_constraintTop_toBottomOf="@+id/button" />
-	</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+			android:text="@string/botao3"
+			android:layout_weight="1"/>
+	</LinearLayout>
+	<!-- Linha 3-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<Button
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/botao1"
+			android:layout_weight="0.25"/>
+		<Button
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/botao2"
+			android:layout_weight="0.50"/>
+		<Button
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/botao3"
+			android:layout_weight="0.25"/>
+	</LinearLayout>
+</LinearLayout>
