@@ -5,5 +5,8 @@
 	<string name="button">Click Here</string>
 	<string name="button_findviewbyid">FindViewById</string>
 	<string name="button_onclick">On Click</string>
-	<string name="headline">Hello Word!</string>
+	<string name="constraint_button1" translatable="false">1</string>
+	<string name="constraint_button2" translatable="false">2</string>
+	<string name="constraint_button3" translatable="false">3</string>
+	<string name="constraint_button4" translatable="false">4</string>
 </resources>
