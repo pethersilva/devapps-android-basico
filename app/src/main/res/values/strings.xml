@@ -6,6 +6,6 @@
 	<string name="button_findviewbyid">FindViewById</string>
 	<string name="button_onclick">On Click</string>
 	<string name="headline">Hello Word!</string>
-	<string name="second_activity_message">Welcome to second Activity %1$s</string>
+	<string name="second_activity_message">Welcome to second Activity %1$s your car is %2$s</string>
 	<string name="please_add_your_name" translatable="false">Please add your name</string>
 </resources>
