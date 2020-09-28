@@ -43,8 +43,18 @@
 			android:id="@+id/button"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="16dp"
 			android:text="@string/button"
+			app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+
+		<EditText
+			android:id="@+id/editTextTextPersonName"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="textPersonName"
+			android:hint="@string/please_add_your_name"
+			app:layout_constraintEnd_toStartOf="@+id/button"
 			app:layout_constraintStart_toStartOf="@+id/startGuideline"
 			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
 
