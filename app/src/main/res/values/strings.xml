@@ -8,4 +8,11 @@
 	<string name="headline">Hello Word!</string>
 	<string name="second_activity_message">Welcome to second Activity %1$s</string>
 	<string name="please_add_your_name" translatable="false">Please add your name</string>
+
+	<string name="please_add_value01" translatable="false">Valor 1</string>
+	<string name="please_add_value02" translatable="false">Valor 2</string>
+	<string name="button_sum" translatable="false">For Result</string>
+
+	<string name="second_activity_return" translatable="false">Result</string>
+
 </resources>

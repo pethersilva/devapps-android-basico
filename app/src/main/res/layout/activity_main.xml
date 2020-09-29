@@ -16,47 +16,56 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.1"/>
+			app:layout_constraintGuide_percent="0.1" />
 
 		<androidx.constraintlayout.widget.Guideline
 			android:id="@+id/topGuideline"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.1"/>
+			app:layout_constraintGuide_percent="0.1" />
 
 		<androidx.constraintlayout.widget.Guideline
 			android:id="@+id/bottomGuideline"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.9"/>
+			app:layout_constraintGuide_percent="0.9" />
 
 		<androidx.constraintlayout.widget.Guideline
 			android:id="@+id/endGuideline"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.9"/>
-
-		<Button
-			android:id="@+id/button"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/button"
-			app:layout_constraintEnd_toStartOf="@+id/endGuideline"
-			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+			app:layout_constraintGuide_percent="0.9" />
 
 		<EditText
-			android:id="@+id/editTextTextPersonName"
+			android:id="@+id/editTextValue01"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:ems="10"
-			android:inputType="textPersonName"
-			android:hint="@string/please_add_your_name"
-			app:layout_constraintEnd_toStartOf="@+id/button"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
+			android:hint="@string/please_add_value01"
+			android:inputType="number"
+			app:layout_constraintStart_toStartOf="@+id/editTextValue02"
 			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+
+		<EditText
+			android:id="@+id/editTextValue02"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="@string/please_add_value02"
+			android:inputType="number"
+			app:layout_constraintStart_toStartOf="@+id/startGuideline"
+			app:layout_constraintTop_toBottomOf="@+id/editTextValue01" />
+
+		<Button
+			android:id="@+id/buttonSum"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/button_sum"
+			app:layout_constraintStart_toEndOf="@+id/editTextValue02"
+			tools:layout_editor_absoluteY="59dp" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
