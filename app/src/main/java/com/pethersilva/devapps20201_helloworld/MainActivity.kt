@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 	companion object {
 		const val MAIN_ACTIVITY_NAME_EXTRA_ID = "name"
-		const val MAIN_ACTIVITY_CAR_EXTRA_ID = "name"
+		const val MAIN_ACTIVITY_CAR_EXTRA_ID = "car"
 	}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
