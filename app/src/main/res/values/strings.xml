@@ -8,4 +8,5 @@
 	<string name="headline">Hello Word!</string>
 	<string name="second_activity_message">Welcome to second Activity %1$s</string>
 	<string name="please_add_your_name" translatable="false">Please add your name</string>
+	<string name="main_activity_set_alarm">Set Alarm</string>
 </resources>
