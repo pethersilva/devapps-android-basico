@@ -6,6 +6,8 @@
 	<string name="button_findviewbyid">FindViewById</string>
 	<string name="button_onclick">On Click</string>
 	<string name="headline">Hello Word!</string>
+	<string name="main_activity_insert_button">Insert</string>
+	<string name="main_activity_insert_state_hint">Type state name</string>
 	<string name="second_activity_message">Welcome to second Activity %1$s</string>
 	<string name="please_add_your_name" translatable="false">Please add your name</string>
 </resources>

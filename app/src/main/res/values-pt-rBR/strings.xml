@@ -7,4 +7,6 @@
 	<string name="button_onclick">On Click</string>
 	<string name="headline">Olá Mundo</string>
 	<string name="second_activity_message">Bem-vindo a segunda Activity %1$s</string>
+	<string name="main_activity_insert_button">Inserir</string>
+	<string name="main_activity_insert_state_hint">Digite o nome do Estado</string>
 </resources>
