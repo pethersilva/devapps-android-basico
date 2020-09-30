@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main_listview)
 		setupListview()
+		setupInsertButton()
+	}
 
+	private fun setupInsertButton() {
 		buttonInserir.setOnClickListener {
 			val name = editTextPersonName.text.toString()
 			if (isNameValid(name)) {
