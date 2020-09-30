@@ -14,17 +14,14 @@ import kotlinx.android.synthetic.main.item_estado.view.*
 
 class EstadoAdapter(private val context: Context,
                     private val estados: List<Estado>) : BaseAdapter() {
-
 	private val bandeiras: TypedArray by lazy {
 		context.resources.obtainTypedArray(R.array.bandeiras)
 	}
 
 	override fun getView(position: Int, view: View?, parent: ViewGroup?): View {
 		val estado = estados[position]
-
 		val holder: ViewHolder
 		val linha: View
-
 		if (view == null) {
 			linha = LayoutInflater.from(context).inflate(R.layout.item_estado,
 				parent, false)
