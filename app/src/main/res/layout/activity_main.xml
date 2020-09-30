@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-
-	<androidx.constraintlayout.widget.ConstraintLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		tools:context=".MainActivity">
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/startGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.1"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/topGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.1"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/bottomGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			app:layout_constraintGuide_percent="0.9"/>
-
-		<androidx.constraintlayout.widget.Guideline
-			android:id="@+id/endGuideline"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			app:layout_constraintGuide_percent="0.9"/>
-
-		<Button
-			android:id="@+id/button"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/button"
-			app:layout_constraintEnd_toStartOf="@+id/endGuideline"
-			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
-
-		<EditText
-			android:id="@+id/editTextTextPersonName"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:ems="10"
-			android:inputType="textPersonName"
-			android:hint="@string/please_add_your_name"
-			app:layout_constraintEnd_toStartOf="@+id/button"
-			app:layout_constraintStart_toStartOf="@+id/startGuideline"
-			app:layout_constraintTop_toTopOf="@+id/topGuideline" />
-
-	</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+	android:layout_height="wrap_content"
+	tools:context=".MainActivity"/>

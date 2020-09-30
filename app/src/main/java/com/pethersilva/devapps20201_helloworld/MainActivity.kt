@@ -1,28 +1,24 @@
 package com.pethersilva.devapps20201_helloworld
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.pethersilva.devapps20201_helloworld.adapter.EstadoAdapter
+import com.pethersilva.devapps20201_helloworld.model.Estado
+import kotlinx.android.synthetic.main.activity_main_listview.*
 
 class MainActivity : AppCompatActivity() {
-	companion object {
-		const val MAIN_ACTIVITY_NAME_EXTRA_ID = "name"
+
+	private val listEstados = listOf<Estado>(Estado("Paraíba", 0),
+		Estado("Pernambuco", 1),
+		Estado("Rio Grande do Norte", 2)
+	)
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_main_listview)
+		val listview = ListView(this)
+		val adapter = EstadoAdapter(this, listEstados)
+		listView.adapter = adapter
 	}
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-		button.setOnClickListener {
-			val name = editTextTextPersonName.text.toString()
-			if (isNameValid(name)) {
-				val secondActivity = Intent(this, SecondActivity::class.java)
-				secondActivity.putExtra(MAIN_ACTIVITY_NAME_EXTRA_ID, name)
-				startActivity(secondActivity)
-			} else {
-				Toast.makeText(this, "Please fill your name", Toast.LENGTH_SHORT).show()
-			}
-		}
-	}
-	private fun isNameValid(name: String): Boolean = !name.isNullOrEmpty()
 }
