@@ -5,47 +5,42 @@ import android.content.res.TypedArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.pethersilva.devapps20201_helloworld.R
 import com.pethersilva.devapps20201_helloworld.model.Estado
 import kotlinx.android.synthetic.main.item_estado.view.*
 
 class EstadoAdapter(private val context: Context,
-                    private val estados: List<Estado>) : BaseAdapter() {
+					private val estados: List<Estado>,
+					private val callback: (Estado) -> Unit) : RecyclerView.Adapter<EstadoAdapter.VH>() {
+
 	private val bandeiras: TypedArray by lazy {
 		context.resources.obtainTypedArray(R.array.bandeiras)
 	}
 
-	override fun getView(position: Int, view: View?, parent: ViewGroup?): View {
-		val estado = estados[position]
-		val holder: ViewHolder
-		val linha: View
-		if (view == null) {
-			linha = LayoutInflater.from(context).inflate(R.layout.item_estado,
-				parent, false)
-			holder = ViewHolder(linha)
-			linha.tag = holder
-		} else {
-			linha = view
-			holder = view.tag as ViewHolder
+	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
+		val v = LayoutInflater.from(parent.context).inflate(R.layout.item_estado
+			, parent, false)
+		val vh = VH(v)
+		vh.itemView.setOnClickListener {
+			val estado = estados[vh.adapterPosition]
+			callback(estado)
 		}
-		holder.txtName.text = estado.nome
-		holder.imgBandeira.setImageDrawable(bandeiras.getDrawable(estado.bandeira))
-		return linha
+		return vh
 	}
 
-	override fun getItem(position: Int) = estados[position]
+	override fun getItemCount() = estados.size
 
-	override fun getItemId(position: Int) = position.toLong()
+	override fun onBindViewHolder(holder: VH, position: Int) {
+		val (name, bandeira) = estados[position]
+		holder.imgBandeira.setImageDrawable(bandeiras.getDrawable(bandeira))
+		holder.txtName.text = name
+	}
 
-	override fun getCount() = estados.size
-
-	companion object {
-		data class ViewHolder(val view: View) {
-			val imgBandeira: ImageView = view.imageViewFlag
-			val txtName: TextView = view.textViewEstadoNome
-		}
+	class VH(itemView: View): RecyclerView.ViewHolder(itemView) {
+		val imgBandeira : ImageView = itemView.imageViewFlag
+		val txtName: TextView = itemView.textViewEstadoNome
 	}
 }
