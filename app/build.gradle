@@ -6,6 +6,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
+	buildFeatures {
+		viewBinding true
+	}
+
     defaultConfig {
         applicationId "com.pethersilva.devapps20201_helloworld"
         minSdkVersion 23

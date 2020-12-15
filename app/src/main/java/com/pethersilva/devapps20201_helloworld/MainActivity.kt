@@ -5,15 +5,22 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.pethersilva.devapps20201_helloworld.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+	private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-		button.setOnClickListener {
-			Toast.makeText(this, "Dessa forma é no Kotlin",
+		binding = ActivityMainBinding.inflate(layoutInflater)
+		val view = binding.root
+        setContentView(view)
+
+		binding.button.setOnClickListener {
+			Toast.makeText(this, "Utilizando o view binding",
 				Toast.LENGTH_SHORT).show()
 		}
 

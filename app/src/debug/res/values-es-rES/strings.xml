@@ -6,4 +6,5 @@
 	<string name="button_findviewbyid">FindViewById</string>
 	<string name="button_onclick">On Click</string>
 	<string name="headline">Hola Mundo</string>
+	<string name="image_content_desc">Mostrando un cielo azul</string>
 </resources>
